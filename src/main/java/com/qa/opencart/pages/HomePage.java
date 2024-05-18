@@ -50,6 +50,8 @@ public class HomePage {
 	 * 
 	 * NEVER write an assertion in this java class. it's a BAD PRACTICE according to Page Object Model
 	 * Assertion is a responsible of a testng class.
+	 * 
+	 * halo
 	 * */
 	
 	
