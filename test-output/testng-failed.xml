@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.opencart.tests.HomePageTest">
+      <class name="com.qa.traveloka.tests.LoginRegression">
         <methods>
-          <include name="searchTest" invocation-numbers="0 1 2"/>
-          <include name="tearDown"/>
           <include name="setup"/>
+          <include name="doLogin"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.qa.opencart.tests.HomePageTest -->
+      </class> <!-- com.qa.traveloka.tests.LoginRegression -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

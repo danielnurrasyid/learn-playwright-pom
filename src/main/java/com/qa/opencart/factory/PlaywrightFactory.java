@@ -18,7 +18,7 @@ public class PlaywrightFactory {
 	
 	//Open Browser
 	
-	//intead of public void we must change to public Page, because we returning a Page
+	//instead of public void we must change to public Page, because we returning a Page
 	public Page initBrowser(String browserName) {
 		
 		System.out.println("Browser name is : " + browserName);
@@ -56,8 +56,6 @@ public class PlaywrightFactory {
 		
 		return page;
 		
-		
-		
 	}
-
+	
 }
