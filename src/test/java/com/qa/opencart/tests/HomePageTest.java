@@ -1,46 +1,26 @@
 package com.qa.opencart.tests;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.microsoft.playwright.*;
-import com.qa.opencart.factory.PlaywrightFactory;
-import com.qa.opencart.pages.HomePage;
+import com.qa.opencart.base.BaseTest;
+import com.qa.opencart.constants.AppConstants;
 
-public class HomePageTest {
+public class HomePageTest extends BaseTest { //EXTENDS inheritence from basetest as a parent class to homepagetest as a child class
 	//this is a place to create a testcase
-	
-	Page page;
-	//class that we already created
-	PlaywrightFactory pf;
-	HomePage homePage;
-	
-	@BeforeTest
-	public void setup() {
-		//call the initBrowser from playwrightfactory
-		pf = new PlaywrightFactory(); //creating object
-		page = pf.initBrowser("chromium");
-		
-		//in this creating object we need to pass a page, because of the constructor
-		//because in the homepage class we use page in methods
-		homePage = new HomePage(page);
-				
-	}
 	
 	@Test
 	public void homePageTitleTest() {
 		String actualTitle = homePage.getHomePageTitle();
 		// do assertion (actualTitle, Expected)
-		Assert.assertEquals(actualTitle, "Your Store");
+		Assert.assertEquals(actualTitle, AppConstants.LOGIN_PAGE_TITLE);
 	}
 	
 	@Test
 	public void homePageURLTest() {
 		String actualURL = homePage.getHomePageURL();
-		Assert.assertEquals(actualURL, "https://naveenautomationlabs.com/opencart/");
+		Assert.assertEquals(actualURL, prop.getProperty("url"));
 		
 	}
 	
@@ -70,11 +50,7 @@ public class HomePageTest {
 	}
 	
 	
-	@AfterTest
-	public void tearDown() {
-		//closing browser because we use browsercontext so we need .context()
-		page.context().browser().close();
-	}
+
 	
 	
 	

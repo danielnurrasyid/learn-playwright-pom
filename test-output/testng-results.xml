@@ -1,25 +1,551 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="0" failed="0" skipped="5">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-19T08:25:16Z" name="Default suite" finished-at="2024-05-19T08:25:43Z" duration-ms="26971">
+  <suite started-at="2024-05-19T09:48:17Z" name="Open Cart Test Regression PW Suite" finished-at="2024-05-19T09:48:53Z" duration-ms="36793">
     <groups>
     </groups>
-    <test started-at="2024-05-19T08:25:16Z" name="Default test" finished-at="2024-05-19T08:25:43Z" duration-ms="26971">
-      <class name="com.qa.traveloka.tests.LoginRegression">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.traveloka.tests.LoginRegression@3a7442c7]" started-at="2024-05-19T08:25:16Z" name="setup" finished-at="2024-05-19T08:25:42Z" duration-ms="25732" status="PASS">
+    <test started-at="2024-05-19T09:48:17Z" name="Open Cart Home Page Test" finished-at="2024-05-19T09:48:53Z" duration-ms="36793">
+      <class name="com.qa.opencart.tests.HomePageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.opencart.tests.HomePageTest@222114ba]" started-at="2024-05-19T09:48:17Z" name="setup" finished-at="2024-05-19T09:48:53Z" duration-ms="36737" status="FAIL">
+          <exception class="com.microsoft.playwright.TimeoutError">
+            <message>
+              <![CDATA[Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
+at com.microsoft.playwright.impl.PageImpl.lambda$navigate$46(PageImpl.java:870)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:870)
+at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+at com.microsoft.playwright.Page.navigate(Page.java:5490)
+at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:64)
+at com.qa.opencart.base.BaseTest.setup(BaseTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+at org.testng.TestRunner.run(TestRunner.java:497)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.TimeoutError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="doLogin()[pri:0, instance:com.qa.traveloka.tests.LoginRegression@3a7442c7]" started-at="2024-05-19T08:25:42Z" name="doLogin" finished-at="2024-05-19T08:25:43Z" duration-ms="697" status="PASS">
+        <test-method signature="homePageTitleTest()[pri:0, instance:com.qa.opencart.tests.HomePageTest@222114ba]" started-at="2024-05-19T09:48:53Z" name="homePageTitleTest" finished-at="2024-05-19T09:48:53Z" duration-ms="0" status="SKIP">
+          <exception class="com.microsoft.playwright.TimeoutError">
+            <message>
+              <![CDATA[Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
+at com.microsoft.playwright.impl.PageImpl.lambda$navigate$46(PageImpl.java:870)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:870)
+at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+at com.microsoft.playwright.Page.navigate(Page.java:5490)
+at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:64)
+at com.qa.opencart.base.BaseTest.setup(BaseTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+at org.testng.TestRunner.run(TestRunner.java:497)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.TimeoutError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.traveloka.tests.LoginRegression@3a7442c7]" started-at="2024-05-19T08:25:43Z" name="tearDown" finished-at="2024-05-19T08:25:43Z" duration-ms="477" status="PASS">
+        </test-method> <!-- homePageTitleTest -->
+        <test-method signature="homePageURLTest()[pri:0, instance:com.qa.opencart.tests.HomePageTest@222114ba]" started-at="2024-05-19T09:48:53Z" name="homePageURLTest" finished-at="2024-05-19T09:48:53Z" duration-ms="0" status="SKIP">
+          <exception class="com.microsoft.playwright.TimeoutError">
+            <message>
+              <![CDATA[Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
+at com.microsoft.playwright.impl.PageImpl.lambda$navigate$46(PageImpl.java:870)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:870)
+at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+at com.microsoft.playwright.Page.navigate(Page.java:5490)
+at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:64)
+at com.qa.opencart.base.BaseTest.setup(BaseTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+at org.testng.TestRunner.run(TestRunner.java:497)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.TimeoutError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageURLTest -->
+        <test-method signature="searchTest(java.lang.String)[pri:0, instance:com.qa.opencart.tests.HomePageTest@222114ba]" started-at="2024-05-19T09:48:53Z" name="searchTest" data-provider="getProductData" finished-at="2024-05-19T09:48:53Z" duration-ms="0" status="SKIP">
+          <exception class="com.microsoft.playwright.TimeoutError">
+            <message>
+              <![CDATA[Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
+at com.microsoft.playwright.impl.PageImpl.lambda$navigate$46(PageImpl.java:870)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:870)
+at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+at com.microsoft.playwright.Page.navigate(Page.java:5490)
+at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:64)
+at com.qa.opencart.base.BaseTest.setup(BaseTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+at org.testng.TestRunner.run(TestRunner.java:497)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.TimeoutError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest -->
+        <test-method signature="searchTest(java.lang.String)[pri:0, instance:com.qa.opencart.tests.HomePageTest@222114ba]" started-at="2024-05-19T09:48:53Z" name="searchTest" data-provider="getProductData" finished-at="2024-05-19T09:48:53Z" duration-ms="0" status="SKIP">
+          <exception class="com.microsoft.playwright.TimeoutError">
+            <message>
+              <![CDATA[Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
+at com.microsoft.playwright.impl.PageImpl.lambda$navigate$46(PageImpl.java:870)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:870)
+at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+at com.microsoft.playwright.Page.navigate(Page.java:5490)
+at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:64)
+at com.qa.opencart.base.BaseTest.setup(BaseTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+at org.testng.TestRunner.run(TestRunner.java:497)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.TimeoutError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest -->
+        <test-method signature="searchTest(java.lang.String)[pri:0, instance:com.qa.opencart.tests.HomePageTest@222114ba]" started-at="2024-05-19T09:48:53Z" name="searchTest" data-provider="getProductData" finished-at="2024-05-19T09:48:53Z" duration-ms="0" status="SKIP">
+          <exception class="com.microsoft.playwright.TimeoutError">
+            <message>
+              <![CDATA[Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
+at com.microsoft.playwright.impl.PageImpl.lambda$navigate$46(PageImpl.java:870)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:870)
+at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+at com.microsoft.playwright.Page.navigate(Page.java:5490)
+at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:64)
+at com.qa.opencart.base.BaseTest.setup(BaseTest.java:32)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+at org.testng.TestRunner.run(TestRunner.java:497)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\progress.js:78:26)
+    at Frame.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\frames.js:517:23)
+    at FrameDispatcher.goto (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\frameDispatcher.js:81:119)
+    at FrameDispatcher._handleCommand (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\User\AppData\Local\Temp\playwright-java-8635074961498742973\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- navigating to "https://naveenautomationlabs.com/opencart/", waiting until "load"
+
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.TimeoutError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.HomePageTest@222114ba]" started-at="2024-05-19T09:48:53Z" name="tearDown" finished-at="2024-05-19T09:48:53Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.traveloka.tests.LoginRegression -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.qa.opencart.tests.HomePageTest -->
+    </test> <!-- Open Cart Home Page Test -->
+  </suite> <!-- Open Cart Test Regression PW Suite -->
 </testng-results>

@@ -1,5 +1,10 @@
 package com.qa.opencart.factory;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
 import com.microsoft.playwright.*;
 
 
@@ -16,10 +21,15 @@ public class PlaywrightFactory {
 	BrowserContext browserContext;
 	Page page;
 	
+	Properties prop;
+	
 	//Open Browser
 	
 	//instead of public void we must change to public Page, because we returning a Page
-	public Page initBrowser(String browserName) {
+	public Page initBrowser(Properties prop) {
+		
+		//this is getting a properties from config file.
+		String browserName = prop.getProperty("browser");
 		
 		System.out.println("Browser name is : " + browserName);
 		playwright = Playwright.create();
@@ -51,11 +61,37 @@ public class PlaywrightFactory {
 		page = browserContext.newPage();
 		
 		//navigate to url
-		page.navigate("https://naveenautomationlabs.com/opencart/");
+		page.navigate(prop.getProperty("url"));
 		
 		
 		return page;
 		
 	}
+	
+	
+	/*
+	 * this method is used to Initialize properties from config file
+	 * Connecting a config file and load the file (using Properties Class) and then
+	 * resulting key and value format
+	 * */
+	
+	public Properties init_prop() {
+		try {
+			FileInputStream ip = new FileInputStream("./src/test/resource/config/config.properties"); //. is representing a project directory outside of src file
+			prop = new Properties(); // Properties class is used to load the FileInputStream Object
+			prop.load(ip);//this line is used to load from file and connect the config file resulting key value format.
+		
+		} catch (FileNotFoundException e) { // this exception used,if there is no file
+			e.printStackTrace();
+		} catch(IOException e) { // this exception used, if when load the file there is an error
+			e.printStackTrace();
+		}
+		
+		return prop;
+		
+	}
+	
+	
+	
 	
 }
