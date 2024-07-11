@@ -23,9 +23,32 @@ public class PlaywrightFactory {
 	
 	Properties prop;
 
+	/*
+	 * ThreadLocal
+	 * is a Java Feature that we can use as a best practice in parallel testing.
+	 * ThreadLocal is able to copy Page to each Thread
+	 * */
+	
+	private static ThreadLocal<Browser> tlBrowser = new ThreadLocal<Browser>();
+	private static ThreadLocal<BrowserContext> tlBrowserContext = new ThreadLocal<BrowserContext>();
+	private static ThreadLocal<Page> tlPage = new ThreadLocal<Page>();
+	private static ThreadLocal<Playwright> tlPlaywright = new ThreadLocal<Playwright>();
+	
+	// we need to use getter setter to use a ThreadLocal
+	public static Browser getBrowser() {
+		return tlBrowser.get();
+	}
+	public static BrowserContext getBrowserContext() {
+		return tlBrowserContext.get();
+	}
+	public static Page getPage() {
+		return tlPage.get();
+	}
+	public static Playwright getPlaywright() {
+		return tlPlaywright.get();
+	}
 	
 	//Open Browser
-	
 	//instead of public void we must change to public Page, because we returning a Page
 	public Page initBrowser(Properties prop) {
 		
@@ -33,21 +56,27 @@ public class PlaywrightFactory {
 		String browserName = prop.getProperty("browser");
 		
 		System.out.println("Browser name is : " + browserName);
-		playwright = Playwright.create();
+		
+		//playwright = Playwright.create();
+		tlPlaywright.set(Playwright.create());
 		
 		switch(browserName.toLowerCase()) {
 		case "chromium":
-			browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			//browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			tlBrowser.set(getPlaywright().chromium().launch(new BrowserType.LaunchOptions().setHeadless(false)));
 			break;
 		case "firefox":
-			browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			//browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			tlBrowser.set(getPlaywright().firefox().launch(new BrowserType.LaunchOptions().setHeadless(false)));
 			break;
 		case "safari":
-			browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			//browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			tlBrowser.set(getPlaywright().webkit().launch(new BrowserType.LaunchOptions().setHeadless(false)));
 			break;
 		case "chrome":
 			//need setchannel to set the browsername that is chrome.
-			browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false));
+			//browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false));
+			tlBrowser.set(getPlaywright().chromium().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false)));
 			break;
 		default:
 			//if there is no browser
@@ -56,16 +85,20 @@ public class PlaywrightFactory {
 		}
 		
 		//create new context of browser
-		browserContext = browser.newContext();
+		//browserContext = browser.newContext();
+		tlBrowserContext.set(getBrowser().newContext());
 		
 		//create new page
-		page = browserContext.newPage();
+		//page = browserContext.newPage();
+		tlPage.set(getBrowserContext().newPage());
 		
 		//navigate to url
-		page.navigate(prop.getProperty("url"));
+		//page.navigate(prop.getProperty("url"));
+		getPage().navigate(prop.getProperty("url").trim());
 		
 		
-		return page;
+		//return page;
+		return getPage();
 		
 	}
 	
