@@ -24,9 +24,14 @@ public class PlaywrightFactory {
 	Properties prop;
 
 	/*
-	 * ThreadLocal
+	 * ThreadLocal Concept
 	 * is a Java Feature that we can use as a best practice in parallel testing.
-	 * ThreadLocal is able to copy Page to each Thread
+	 * ThreadLocal is able to copy an object to each Thread
+	 * If we initializing a specific object with the ThreadLocal, it will give you the local copy for a specific Thread for that particular object.
+	 * Will help us to produce a parallel execution properly
+	 * Will help us to execute test cases with parallel execution with the multiple report generation
+	 * Good practice using ThreadLocal
+	 * Better Test Management using ThreadLocal
 	 * */
 	
 	private static ThreadLocal<Browser> tlBrowser = new ThreadLocal<Browser>();
