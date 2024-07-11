@@ -2,11 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite name = "Open Cart Test Regression PW Suite" verbose="4">
+<suite name = "Open Cart Test Regression PW Suite" verbose="4" thread-count="2" parallel="tests">
 	
 	<test name = "Open Cart Home Page Test">
 		<classes>
 			<class name = "com.qa.opencart.tests.HomePageTest"/>
+		</classes>
+	</test>
+	
+	<test name = "Open Cart Login Page Test">
+		<classes>
+			<class name = "com.qa.opencart.tests.LoginPageTest"/>
 		</classes>
 	</test>	
 	

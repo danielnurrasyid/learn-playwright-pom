@@ -14,7 +14,7 @@ public class HomePageTest extends BaseTest { //EXTENDS inheritence from basetest
 	public void homePageTitleTest() {
 		String actualTitle = homePage.getHomePageTitle();
 		// do assertion (actualTitle, Expected)
-		Assert.assertEquals(actualTitle, AppConstants.LOGIN_PAGE_TITLE);
+		Assert.assertEquals(actualTitle, AppConstants.HOME_PAGE_TITLE);
 	}
 	
 	@Test
